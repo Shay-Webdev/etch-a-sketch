@@ -11,11 +11,21 @@ for (let i = 0; i<16; i++){
 const gridDivs = document.querySelectorAll('.gridDiv');
 
 gridDivs.forEach((gridDiv) => {
-    gridDiv.addEventListener("mouseover", () =>{
+
+    let currentOpacity = 0.1;
+    let hoverCount = 0;
+   const initialGrid = gridDiv.addEventListener("mouseover", () =>{
         const randomColor = Math.floor(Math.random()*16777215).toString(16);
         gridDiv.style.backgroundColor = "#" + randomColor;
+        hoverCount++;
+      if (hoverCount <= 10) {
+        currentOpacity += 0.1;
+        gridDiv.style.opacity = currentOpacity;
+      }
+    
     });
 
+    
 });
 
 
@@ -50,9 +60,17 @@ userInputButton.addEventListener("click", () => {
                 const gridDivs = document.querySelectorAll('.gridDiv');
 
                 gridDivs.forEach((gridDiv) => {
+                    let currentOpacity = 0.1;
+                    let hoverCount = 0;
                     gridDiv.addEventListener("mouseover", () =>{
                         const randomColor = Math.floor(Math.random()*16777215).toString(16);
                         gridDiv.style.backgroundColor = "#" + randomColor;
+                        hoverCount++;
+                        if (hoverCount <= 10) {
+                          currentOpacity += 0.1;
+                          gridDiv.style.opacity = currentOpacity;
+                        }
+    
                     });
                 
                 });
