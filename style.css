@@ -22,3 +22,9 @@
     flex : 1 0 auto;
 }
 
+.userInput{
+    border-radius: 4px;
+    background-color: aqua;
+    color: blueviolet;
+    justify-content: center;
+}
