@@ -10,3 +10,15 @@
     flex-wrap: wrap;
     gap: 0;
 }
+
+.gridDiv{
+    width : calc(100%/16);
+    height :calc(100%/16);
+    margin :0px;
+    padding: 0px;
+    background-color : grey;
+    border : 1px solid black;
+    box-sizing : border-box;
+    flex : 1 0 auto;
+}
+
