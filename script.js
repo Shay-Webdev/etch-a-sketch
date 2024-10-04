@@ -12,7 +12,8 @@ const gridDivs = document.querySelectorAll('.gridDiv');
 
 gridDivs.forEach((gridDiv) => {
     gridDiv.addEventListener("mouseover", () =>{
-        gridDiv.style.backgroundColor = "red";
+        const randomColor = Math.floor(Math.random()*16777215).toString(16);
+        gridDiv.style.backgroundColor = "#" + randomColor;
     });
 
 });
@@ -50,7 +51,8 @@ userInputButton.addEventListener("click", () => {
 
                 gridDivs.forEach((gridDiv) => {
                     gridDiv.addEventListener("mouseover", () =>{
-                        gridDiv.style.backgroundColor = "red";
+                        const randomColor = Math.floor(Math.random()*16777215).toString(16);
+                        gridDiv.style.backgroundColor = "#" + randomColor;
                     });
                 
                 });
